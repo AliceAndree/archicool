@@ -43,7 +43,7 @@ const heroSection = () => {
   pinterest.id = "pinterest";
   instagram.id = "instagram";
 
-  archicool.textContent = "archicool";
+  archicool.textContent = "archi cool";
   projects.textContent = "projets";
   about.textContent = "à propos";
   contact.textContent = "contact";

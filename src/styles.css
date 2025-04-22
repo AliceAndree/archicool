@@ -1,6 +1,12 @@
 @import "./reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 
+@font-face {
+  font-family: "Liquido Regular";
+  font-style: normal;
+  src: url(".//fonts/LIQUIDO-Reguar-400.otf") format("opentype");
+}
+
 :root {
   /* Color Palette */
   --powder-pink: #fffaed;
@@ -29,6 +35,7 @@
 #signature,
 #slogan,
 #projects-text,
+#about-text,
 .cta-button {
   letter-spacing: 2px;
 }
@@ -37,7 +44,9 @@ header,
 #hero,
 nav,
 #aside,
-#right-section {
+#projects-section,
+#right-section,
+#about-main {
   display: flex;
 }
 
@@ -106,7 +115,6 @@ nav {
   background-color: var(--nude-pink);
   position: relative;
   height: 100svh;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 150px;
@@ -151,4 +159,48 @@ nav {
   border-radius: 35px;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+#about-section {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  padding: 0 50px;
+  height: 100svh;
+  background-image: var(--grid-lines);
+  justify-content: center;
+  align-items: center;
+}
+
+#about-main {
+  flex-direction: column;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: var(--nude-pink);
+  border-radius: 10px;
+  padding: 10px 50px 50px 50px;
+
+  hr {
+    width: 100%;
+    border: none;
+    height: 3px;
+    background-color: var(--mustard-yellow);
+    margin: 0 0 25px 0;
+  }
+}
+
+#about-title {
+  font-family: "Liquido Regular";
+  font-size: 5rem;
+  color: var(--tangerine);
+}
+
+#about-text {
+  text-align: justify;
+  color: var(--tangerine);
+
+  a {
+    color: var(--royal-blue);
+    text-transform: uppercase;
+  }
 }
