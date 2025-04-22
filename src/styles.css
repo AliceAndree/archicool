@@ -1,0 +1,154 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+:root {
+  /* Color Palette */
+  --powder-pink: #fffaed;
+  --lavender: #bcb7f2;
+  --tangerine: #ff671f;
+  --nude-pink: #ffecdc;
+  --mustard-yellow: #fcb803;
+  --royal-blue: #0034eb;
+
+  /* Fonts */
+  --Kode-Mono: "Kode Mono", monospace;
+  font-family: var(--Kode-Mono);
+}
+
+#hero-section {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  padding: 0 50px;
+  height: 100svh;
+  background-color: var(--powder-pink);
+}
+
+.nav-link,
+#contact,
+#signature,
+#slogan,
+#projects-text,
+.cta-button {
+  letter-spacing: 2px;
+}
+
+header,
+#hero,
+nav,
+#aside,
+#right-section {
+  display: flex;
+}
+
+header {
+  grid-column: 1 / 4;
+  /* height: 80px; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  gap: 50px;
+}
+
+.nav-link,
+#contact,
+#signature {
+  color: var(--tangerine);
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+#aside {
+  align-items: center;
+}
+
+#signature {
+  writing-mode: sideways-lr;
+}
+
+#hero {
+  position: relative;
+  justify-content: center;
+  background-color: var(--nude-pink);
+  border-radius: 10px;
+
+  #slogan {
+    position: absolute;
+    max-width: 420px;
+    min-width: 300px;
+    color: var(--tangerine);
+    top: 65%;
+    right: 55%;
+    &::after {
+      content: var(--arrow-icon);
+      margin: 20px 0 0 0;
+    }
+  }
+}
+
+#socials {
+  grid-column: 1 /2;
+  grid-row: 3 / 4;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+
+  img {
+    height: 24px;
+  }
+}
+
+#projects-section {
+  background-color: var(--nude-pink);
+  position: relative;
+  height: 100svh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 150px;
+}
+
+#projects-title {
+  position: absolute;
+  top: 20%;
+  left: 0;
+}
+
+#projects-plan {
+  background-image: var(--projects-plan);
+  width: 500px;
+  height: 614px;
+  z-index: 100;
+}
+
+#right-section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 500px;
+  height: 614px;
+  z-index: 100;
+}
+
+#projects-text {
+  max-width: 380px;
+  text-align: center;
+  color: var(--tangerine);
+  padding: 200px 0 0 0;
+}
+
+.cta-button {
+  border: none;
+  background-color: var(--tangerine);
+  color: white;
+  width: 250px;
+  height: 55px;
+  border-radius: 35px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
