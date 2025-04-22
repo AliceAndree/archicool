@@ -81,6 +81,35 @@ const heroSection = () => {
   container.appendChild(socials);
 
   body.appendChild(container);
+
+  archicool.addEventListener("click", () => {
+    const homeSection = "#hero-section";
+    sectionScroll(homeSection);
+  });
+
+  projects.addEventListener("click", () => {
+    const projectsSection = "#projects-section";
+    sectionScroll(projectsSection);
+  });
+
+  about.addEventListener("click", () => {
+    const aboutSection = "#about-section";
+    sectionScroll(aboutSection);
+  });
+
+  contact.addEventListener("click", () => {
+    const contactSection = "#contact-section";
+    sectionScroll(contactSection);
+  });
+
+  const sectionScroll = (section) => {
+    window.location.href = section;
+    window.addEventListener(
+      "hashchange",
+      () => window.history.pushState({}, "", "/"),
+      {}
+    );
+  };
 };
 
 export default heroSection;

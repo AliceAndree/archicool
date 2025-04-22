@@ -16,11 +16,40 @@
   --mustard-yellow: #fcb803;
   --softer-mustard: #f9d064;
   --royal-blue: #0034eb;
+  --light-royal-blue: rgba(0, 51, 235, 0.5);
 
   /* Fonts */
   --Kode-Mono: "Kode Mono", monospace;
   --Liquido-Regular: "Liquido Regular";
   font-family: var(--Kode-Mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+button,
+#socials img:hover {
+  cursor: pointer;
+}
+
+header nav a,
+#contact {
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 0 auto;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+    background: var(--light-royal-blue);
+  }
 }
 
 #hero-section {
@@ -141,7 +170,6 @@ header {
 }
 
 #projects-plan {
-  /* background-image: var(--projects-plan); */
   min-width: 500px;
   min-height: 614px;
   z-index: 100;
