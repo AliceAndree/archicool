@@ -18,6 +18,7 @@
 
   /* Fonts */
   --Kode-Mono: "Kode Mono", monospace;
+  --Liquido-Regular: "Liquido Regular";
   font-family: var(--Kode-Mono);
 }
 
@@ -26,7 +27,6 @@
   grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: 1fr 2fr 1fr;
   padding: 0 50px;
-  height: 100svh;
   background-color: var(--powder-pink);
 }
 
@@ -45,14 +45,26 @@ header,
 nav,
 #aside,
 #projects-section,
-#right-section,
-#about-main {
+#projects-right-section,
+#about-main,
+#contact-section,
+#contact-left-section,
+#contact-right-section,
+#contact-form,
+#name,
+.form-element {
   display: flex;
+}
+
+#hero-section,
+#projects-section,
+#about-section,
+#contact-section {
+  height: 100svh;
 }
 
 header {
   grid-column: 1 / 4;
-  /* height: 80px; */
   justify-content: space-between;
   align-items: center;
 }
@@ -114,7 +126,6 @@ nav {
 #projects-section {
   background-color: var(--nude-pink);
   position: relative;
-  height: 100svh;
   justify-content: space-between;
   align-items: center;
   padding: 0 150px;
@@ -133,7 +144,7 @@ nav {
   z-index: 100;
 }
 
-#right-section {
+#projects-right-section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -144,7 +155,7 @@ nav {
 }
 
 #projects-text {
-  max-width: 380px;
+  max-width: 420px;
   text-align: center;
   color: var(--tangerine);
   padding: 200px 0 0 0;
@@ -166,7 +177,7 @@ nav {
   grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: 1fr 2fr 1fr;
   padding: 0 50px;
-  height: 100svh;
+  background-color: var(--powder-pink);
   background-image: var(--grid-lines);
   justify-content: center;
   align-items: center;
@@ -189,9 +200,13 @@ nav {
   }
 }
 
-#about-title {
-  font-family: "Liquido Regular";
+#about-title,
+#contact-title {
+  font-family: var(--Liquido-Regular);
   font-size: 5rem;
+}
+
+#about-title {
   color: var(--tangerine);
 }
 
@@ -203,4 +218,75 @@ nav {
     color: var(--royal-blue);
     text-transform: uppercase;
   }
+}
+
+#contact-left-section,
+#contact-right-section {
+  width: 50%;
+}
+
+#contact-left-section {
+  background-color: var(--powder-pink);
+  flex-direction: column;
+  padding: 50px 80px;
+}
+
+#contact-title {
+  color: var(--royal-blue);
+}
+
+#contact-form {
+  flex-direction: column;
+  gap: 10px;
+
+  button {
+    margin: 20px 0 0 0;
+  }
+}
+
+#name {
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.form-element {
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    color: var(--tangerine);
+  }
+
+  input {
+    height: 40px;
+  }
+
+  textarea {
+    height: auto;
+  }
+
+  input,
+  textarea {
+    background-color: transparent;
+    border-radius: 10px;
+    border: solid 1px var(--mustard-yellow);
+    padding: 10px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--royal-blue);
+      opacity: 0.3;
+    }
+  }
+}
+
+#contact-right-section {
+  background-color: var(--lavender);
+  justify-content: center;
+  align-items: center;
+  background-image: var(--yellow-smiley);
+  background-repeat: repeat-y;
 }

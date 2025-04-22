@@ -13,7 +13,7 @@ const projectsSection = () => {
   container.id = "projects-section";
   sectionTitle.id = "projects-title";
   planImage.id = "projects-plan";
-  rightSection.id = "right-section";
+  rightSection.id = "projects-right-section";
   textPresentation.id = "projects-text";
   ctaButton.classList.add("cta-button");
 
