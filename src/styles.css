@@ -16,7 +16,7 @@
   --mustard-yellow: #fcb803;
   --softer-mustard: #f9d064;
   --royal-blue: #0034eb;
-  --light-royal-blue: rgba(0, 51, 235, 0.5);
+  --light-royal-blue: #0033eb80;
 
   /* Fonts */
   --Kode-Mono: "Kode Mono", monospace;
@@ -152,6 +152,32 @@ header {
 
   img {
     height: 24px;
+  }
+}
+
+#down-arrow {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  margin: auto;
+  animation: float 1s ease-in-out infinite;
+  transition: 1s ease all;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-10px);
+  }
+
+  100% {
+    transform: translatey(0px);
   }
 }
 

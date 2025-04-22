@@ -5,6 +5,7 @@ const footerSection = () => {
   const container = document.createElement("footer");
   const logo = document.createElement("img");
   const copyright = document.createElement("h5");
+  const instaLink = document.createElement("a");
   const nav = document.createElement("nav");
   const archicool = document.createElement("a");
   const projects = document.createElement("a");
@@ -13,7 +14,9 @@ const footerSection = () => {
 
   logo.src = smallLogoSVG;
 
-  copyright.innerHTML = `&copy Website designed & coded by <a>Alice Andrée Thiel</a>`;
+  instaLink.textContent = "Alice Andrée Thiel";
+  copyright.innerHTML = `&copy Website designed & coded by `;
+  copyright.appendChild(instaLink);
   archicool.textContent = "Archi Cool";
   projects.textContent = "Projects";
   about.textContent = "À propos";
@@ -29,6 +32,10 @@ const footerSection = () => {
   container.appendChild(nav);
 
   body.appendChild(container);
+
+  instaLink.addEventListener("click", () => {
+    window.open("https://www.instagram.com/alice____andree/", "_blank");
+  });
 };
 
 export default footerSection;

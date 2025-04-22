@@ -1,5 +1,6 @@
 import arrowSVG from "../assets/arrow.svg";
 import logoSVG from "../assets/logo.svg";
+import downArrowSVG from "../assets/down-arrow.svg";
 import fbSVG from "../assets/fb.svg";
 import instaSVG from "../assets/insta.svg";
 import pinterestSVG from "../assets/pinterest.svg";
@@ -20,6 +21,7 @@ const heroSection = () => {
   const sparkle = document.createElement("img");
   const slogan = document.createElement("p");
   const arrow = document.createElement("img");
+  const downArrow = document.createElement("img");
   const socials = document.createElement("div");
   const facebook = document.createElement("img");
   const pinterest = document.createElement("img");
@@ -38,6 +40,7 @@ const heroSection = () => {
   sparkle.id = "sparkle";
   slogan.id = "slogan";
   arrow.id = "arrow";
+  downArrow.id = "down-arrow";
   socials.id = "socials";
   facebook.id = "facebook";
   pinterest.id = "pinterest";
@@ -54,6 +57,7 @@ const heroSection = () => {
   slogan.style.setProperty(`--arrow-icon`, `url("${arrowSVG}")`);
 
   logo.src = logoSVG;
+  downArrow.src = downArrowSVG;
   facebook.src = fbSVG;
   instagram.src = instaSVG;
   pinterest.src = pinterestSVG;
@@ -79,6 +83,7 @@ const heroSection = () => {
   container.appendChild(aside);
   container.appendChild(hero);
   container.appendChild(socials);
+  container.appendChild(downArrow);
 
   body.appendChild(container);
 
@@ -100,6 +105,11 @@ const heroSection = () => {
   contact.addEventListener("click", () => {
     const contactSection = "#contact-section";
     sectionScroll(contactSection);
+  });
+
+  downArrow.addEventListener("click", () => {
+    const projectsSection = "#projects-section";
+    sectionScroll(projectsSection);
   });
 
   const sectionScroll = (section) => {
