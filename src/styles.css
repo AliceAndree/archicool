@@ -14,6 +14,7 @@
   --tangerine: #ff671f;
   --nude-pink: #ffecdc;
   --mustard-yellow: #fcb803;
+  --softer-mustard: #f9d064;
   --royal-blue: #0034eb;
 
   /* Fonts */
@@ -52,7 +53,9 @@ nav,
 #contact-right-section,
 #contact-form,
 #name,
-.form-element {
+.form-element,
+footer,
+footer nav {
   display: flex;
 }
 
@@ -67,10 +70,10 @@ header {
   grid-column: 1 / 4;
   justify-content: space-between;
   align-items: center;
-}
 
-nav {
-  gap: 50px;
+  nav {
+    gap: 50px;
+  }
 }
 
 .nav-link,
@@ -138,9 +141,9 @@ nav {
 }
 
 #projects-plan {
-  background-image: var(--projects-plan);
-  width: 500px;
-  height: 614px;
+  /* background-image: var(--projects-plan); */
+  min-width: 500px;
+  min-height: 614px;
   z-index: 100;
 }
 
@@ -289,4 +292,22 @@ nav {
   align-items: center;
   background-image: var(--yellow-smiley);
   background-repeat: repeat-y;
+}
+
+footer {
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--royal-blue);
+  background-color: var(--softer-mustard);
+
+  h5 {
+    a {
+      border-bottom: solid 1px var(--tangerine);
+    }
+  }
+
+  nav {
+    flex-direction: column;
+  }
 }

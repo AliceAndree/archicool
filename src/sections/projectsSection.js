@@ -5,7 +5,8 @@ const projectsSection = () => {
   const body = document.querySelector("body");
   const container = document.createElement("div");
   const sectionTitle = document.createElement("img");
-  const planImage = document.createElement("div");
+  const plan = document.createElement("div");
+  const planImage = document.createElement("img");
   const rightSection = document.createElement("div");
   const textPresentation = document.createElement("p");
   const ctaButton = document.createElement("button");
@@ -18,7 +19,8 @@ const projectsSection = () => {
   ctaButton.classList.add("cta-button");
 
   sectionTitle.src = titleSVG;
-  planImage.style.setProperty(`--projects-plan`, `url("${planSVG}")`);
+  planImage.src = planSVG;
+  plan.appendChild(planImage);
 
   textPresentation.textContent =
     "Du fun à chaque coin de mur, pour un quotidien enjoué. Votre intérieur, notre terrain de jeu coloré.";
