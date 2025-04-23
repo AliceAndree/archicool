@@ -23,7 +23,7 @@ const projectsSection = () => {
   plan.appendChild(planImage);
 
   textPresentation.textContent =
-    "Du fun à chaque coin de mur, pour un quotidien enjoué. Votre intérieur, notre terrain de jeu coloré.";
+    "Chacun de nos projets se veut humain, engagé et créatif, s'adressant à celles et ceux qui veulent transformer leur intérieur en un espace aligné avec leurs valeurs et leur personnalité décalée.";
   ctaButton.textContent = "voir";
 
   rightSection.appendChild(textPresentation);

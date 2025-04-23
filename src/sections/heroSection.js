@@ -52,7 +52,7 @@ const heroSection = () => {
   contact.textContent = "contact";
   signature.textContent = "made by alice andrée thiel";
   slogan.textContent =
-    "Du fun à chaque coin de mur, pour un quotidien enjoué. Votre intérieur, notre terrain de jeu coloré.";
+    "Du fun à chaque coin de mur, pour un quotidien enjoué. Votre espace, notre terrain de jeu coloré.";
 
   slogan.style.setProperty(`--arrow-icon`, `url("${arrowSVG}")`);
 
