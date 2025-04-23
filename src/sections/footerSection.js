@@ -36,6 +36,35 @@ const footerSection = () => {
   instaLink.addEventListener("click", () => {
     window.open("https://www.instagram.com/alice____andree/", "_blank");
   });
+
+  archicool.addEventListener("click", () => {
+    const homeSection = "#hero-section";
+    sectionScroll(homeSection);
+  });
+
+  projects.addEventListener("click", () => {
+    const projectsSection = "#projects-section";
+    sectionScroll(projectsSection);
+  });
+
+  about.addEventListener("click", () => {
+    const aboutSection = "#about-section";
+    sectionScroll(aboutSection);
+  });
+
+  contact.addEventListener("click", () => {
+    const contactSection = "#contact-section";
+    sectionScroll(contactSection);
+  });
+
+  const sectionScroll = (section) => {
+    window.location.href = section;
+    window.addEventListener(
+      "hashchange",
+      () => window.history.pushState({}, "", "/"),
+      {}
+    );
+  };
 };
 
 export default footerSection;

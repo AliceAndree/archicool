@@ -112,6 +112,21 @@ const heroSection = () => {
     sectionScroll(projectsSection);
   });
 
+  facebook.addEventListener("click", () => {
+    const facebookLink = "https://www.facebook.com/archicool.studio/";
+    openLink(facebookLink);
+  });
+
+  pinterest.addEventListener("click", () => {
+    const pinterestLink = "https://www.pinterest.com/archicoolstudio/";
+    openLink(pinterestLink);
+  });
+
+  instagram.addEventListener("click", () => {
+    const instagramLink = "https://www.instagram.com/archicool.studio";
+    openLink(instagramLink);
+  });
+
   const sectionScroll = (section) => {
     window.location.href = section;
     window.addEventListener(
@@ -119,6 +134,10 @@ const heroSection = () => {
       () => window.history.pushState({}, "", "/"),
       {}
     );
+  };
+
+  const openLink = (link) => {
+    window.open(link, "_blank");
   };
 };
 

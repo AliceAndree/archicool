@@ -271,7 +271,7 @@ header {
   text-align: justify;
   color: var(--tangerine);
 
-  a {
+  span {
     color: var(--royal-blue);
     text-transform: uppercase;
   }
